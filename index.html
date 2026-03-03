@@ -216,6 +216,7 @@
                     <div>
                         <label class="block text-xs font-bold text-gray-500 uppercase mb-2">Google Script URL</label>
                         <input id="set-gas-url" type="text" class="w-full p-2 border border-slate-200 rounded-lg" placeholder="URL Web App Script">
+                        <p class="text-[10px] text-slate-400 mt-1">Default: Spreadsheet ID 1bBnA1YLVOpvbjrxY22JsIhxLrATo7f0D67LRAlbA_Ug</p>
                     </div>
                 </div>
                 <button onclick="saveSettings()" class="mt-6 w-full bg-slate-800 text-white py-2 rounded-lg font-bold hover:bg-slate-900 transition">Simpan Perubahan</button>
@@ -281,7 +282,7 @@
         let logs = JSON.parse(localStorage.getItem('abs_logs')) || [];
         let config = JSON.parse(localStorage.getItem('abs_config')) || {
             masukStart: "07:00", masukEnd: "07:30", pulangStart: "14:00",
-            waToken: "", gasUrl: "", adminPass: "admin123"
+            waToken: "", gasUrl: "https://script.google.com/macros/s/AKfycbz-DEFAULT-URL/exec", adminPass: "admin123"
         };
 
         let scanner = null;
